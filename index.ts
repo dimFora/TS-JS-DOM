@@ -11,7 +11,11 @@ inner.innerHTML = 'Ворона птица умная';
 inner.style.color = 'red';
 
 // Используя метод forEach выводим содержание BODY в алерт
-
-let childNodes = document.body.childNodes as NodeList;
+let childBodyNodes = document.body.childNodes as NodeList;
 let forEach = Array.prototype.forEach;
-forEach.call( childNodes, (i)=> alert(i) );
+forEach.call( childBodyNodes, (i)=> alert( `From BODY: ${i}` ) );
+
+// Используя метод forEach выводим содержание HEAD в алерт
+let childHeadNodes = document.head.childNodes as NodeList;
+forEach.call(childHeadNodes, i => alert( `From HEAD: ${i}` ));
+
